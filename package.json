@@ -4,7 +4,7 @@
   "description": "training project",
   "main": "index.js",
   "bin": {
-    "frontend-project-lvl1": "./bin/brain-games.js"
+    "brain-games": "./bin/brain-games.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -19,5 +19,9 @@
     "url": "https://github.com/MYiLA/frontend-project-lvl1/issues"
   },
   "homepage": "https://github.com/MYiLA/frontend-project-lvl1#readme",
-  "type": "module"
+  "type": "module",
+  "devDependencies": {
+    "@babel/core": "^7.9.6",
+    "@babel/node": "^7.8.7"
+  }
 }
