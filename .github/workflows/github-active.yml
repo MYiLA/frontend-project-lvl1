@@ -2,7 +2,7 @@ name: github-active-node-ci
 on: [push, pull_request]
 jobs:
   testLint:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
     - run:
         make lint
