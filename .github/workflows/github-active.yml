@@ -5,4 +5,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: makeLint
-      run: make lint
+      run: esho "Hello world"
+      # run: make lint
