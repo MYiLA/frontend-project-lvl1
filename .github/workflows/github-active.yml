@@ -1,4 +1,4 @@
-name: github-active-node-ci
+name: node-ci
 on: [push, pull_request]
 jobs:
   testLint:
