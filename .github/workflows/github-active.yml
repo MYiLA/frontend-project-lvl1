@@ -4,5 +4,5 @@ jobs:
   testLint:
     runs-on: ubuntu-latest
     steps:
-      run:
+    - run:
         make lint
