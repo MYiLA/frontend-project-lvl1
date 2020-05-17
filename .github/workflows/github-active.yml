@@ -4,5 +4,6 @@ jobs:
   testLint:
     runs-on: ubuntu-latest
     steps:
-    - run:
-      pwd make lint
+    - name: makeLint
+      run:
+      make lint
