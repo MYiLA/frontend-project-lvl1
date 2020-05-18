@@ -16,19 +16,19 @@ const playEvenParity = (name) => {
     const number = getRandomNum(minNum, maxNum);
     console.log(`Question: ${number}`);
     const answer = readlineSync.question('Your answer:');
+
     if (isEven(number) === answer) {
       console.log('Correct!');
       winCounter += 1;
     }
 
     if (isEven(number) !== answer) {
-      console.log(`"${answer}" is wrong answer ;(. Correct answer was "${isEven(number)}".
-      Let's try again, ${name}!`);
+      console.log(`"${answer}" is wrong answer ;(. Correct answer was "${isEven(number)}".`);
       winCounter = 0;
     }
-  } while (winCounter < maxLvl);
+  } while (winCounter > 0 && winCounter < maxLvl);
 
-  console.log(`Congratulations, ${name}!`);
+  return winCounter === maxLvl ? console.log(`Congratulations, ${name}!`) : console.log(`Let's try again, ${name}!`);
 };
 
 export default playEvenParity;
