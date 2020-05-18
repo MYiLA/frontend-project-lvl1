@@ -4,3 +4,4 @@
 
 
 <!-- https://github.com/MYiLA/frontend-project-lvl1/workflows/<WORKFLOW_NAME>/badge.svg -->
+https://asciinema.org/a/ngGY9OKfu6jCoA5LFsZb1X69J
