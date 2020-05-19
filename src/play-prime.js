@@ -5,7 +5,7 @@ const generateQuestion = () => String(getRandomNum());
 
 const generateAnswer = (question) => {
   const num = Number(question);
-  if (num <= 1) {
+  if (num <= 1 || num === 4) {
     return 'no';
   }
 
