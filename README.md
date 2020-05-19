@@ -9,3 +9,5 @@ https://asciinema.org/a/331620
 
 Asciinema for game brain-gcd:
 https://asciinema.org/a/331624
+
+Asciinema for game brain-progression
