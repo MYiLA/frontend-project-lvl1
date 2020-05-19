@@ -42,4 +42,6 @@
 
 <h2>Asciinema for game brain-prime:</h2>
 
-<script id="asciicast-331827" src="https://asciinema.org/a/331827.js" async></script>
+<a href="https://asciinema.org/a/331827" target="_blank">
+  <img src="https://asciinema.org/a/331827.svg" />
+</a>
