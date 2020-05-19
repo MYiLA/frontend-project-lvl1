@@ -1,5 +1,5 @@
-import createFlow from './flow.js';
-import getRandomNum from './random-num.js';
+import createFlow from '../flow.js';
+import getRandomNum from '../random-num.js';
 
 const lengthProgression = 10;
 const createHiddenElPosition = () => getRandomNum(0, lengthProgression - 1);
@@ -24,11 +24,11 @@ const generateAnswer = (question) => {
     if (progressionArr[i] === '..') {
       const elBefore = Number(progressionArr[i - 1]);
       const elAfter = Number(progressionArr[i + 1]);
-      const isFirst = i <= 1;
-      const difference = isFirst
+      const isFirstEl = i <= 1;
+      const difference = isFirstEl
         ? Number(progressionArr[i + 2]) - elAfter
         : elBefore - Number(progressionArr[i - 2]);
-      return isFirst ? String(elAfter - difference) : String(elBefore + difference);
+      return isFirstEl ? String(elAfter - difference) : String(elBefore + difference);
     }
   }
   return undefined;

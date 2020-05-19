@@ -1,5 +1,5 @@
-import createFlow from './flow.js';
-import getRandomNum from './random-num.js';
+import createFlow from '../flow.js';
+import getRandomNum from '../random-num.js';
 
 const isEven = (num) => (num % 2 === 0 ? 'yes' : 'no');
 const generateQuestion = () => getRandomNum();

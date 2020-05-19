@@ -1,5 +1,5 @@
-import createFlow from './flow.js';
-import getRandomNum from './random-num.js';
+import createFlow from '../flow.js';
+import getRandomNum from '../random-num.js';
 
 const generateQuestion = () => String(getRandomNum());
 
