@@ -6,3 +6,6 @@ https://asciinema.org/a/331508
 
 Asciinema for game brain-calc:
 https://asciinema.org/a/331620
+
+Asciinema for game brain-gcd:
+https://asciinema.org/a/331624
