@@ -39,3 +39,5 @@
 <a href="https://asciinema.org/a/331784" target="_blank">
   <img src="https://asciinema.org/a/331784.svg" />
 </a>
+
+<h2>Asciinema for game brain-prime:</h2>
