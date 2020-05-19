@@ -8,7 +8,7 @@ const createFlow = (name, questionFunction, answerFunction) => {
     const answer = answerFunction(question);
 
     console.log(`Question: ${question}`);
-    const answerUser = readlineSync.question('Your answer:');
+    const answerUser = readlineSync.question('Your answer: ');
 
     if (answer === answerUser) {
       console.log('Correct!');
