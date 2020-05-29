@@ -1,13 +1,19 @@
 import readlineSync from 'readline-sync';
 
-const createFlow = (name, questionFunction, answerFunction) => {
+const createFlow = (generateQuestionAnswer, description) => {
   let winCounter = 0;
   const maxLvl = 3;
-  do {
-    const question = questionFunction();
-    const answer = answerFunction(question);
 
-    console.log(`Question: ${question}`);
+  console.log('Welcome to the Brain Games!');
+  const name = readlineSync.question('May I have your name?');
+  console.log(`Hello, ${name}!`);
+  console.log(description);
+
+  do {
+    const task = generateQuestionAnswer()[0];
+    const answer = generateQuestionAnswer()[1];
+
+    console.log(`Question: ${task}`);
     const answerUser = readlineSync.question('Your answer: ');
 
     if (answer === answerUser) {

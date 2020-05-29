@@ -22,12 +22,17 @@
   "type": "module",
   "devDependencies": {
     "@babel/core": "^7.9.6",
-    "@babel/node": "^7.8.7"
-  },
-  "dependencies": {
+    "@babel/node": "^7.8.7",
     "eslint": "^7.0.0",
     "eslint-config-airbnb-base": "^14.1.0",
-    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-import": "^2.20.2"
+  },
+  "dependencies": {
     "readline-sync": "^1.4.10"
-  }
+  },
+  "keywords": [
+    "brain",
+    "games",
+    "brain-games"
+  ]
 }
