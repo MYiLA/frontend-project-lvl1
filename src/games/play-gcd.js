@@ -1,44 +1,41 @@
 import createFlow from '../flow.js';
-// import getRandomNum from '../random-num.js';
+import getRandomNum from '../random-num.js';
 
 const description = 'Find the greatest common divisor of given numbers.';
 
 const generateQuestionAnswer = () => {
+  const taskArr = [];
+  let a = getRandomNum();
+  let b = getRandomNum();
 
+  taskArr[0] = `${a} ${b}`;
+
+  if (a === b) {
+    taskArr[1] = String(a);
+  } else
+  if (a === 0) {
+    taskArr[1] = String(b);
+  } else
+  if (b === 0) {
+    taskArr[1] = String(a);
+  } else
+  if (a !== 0 && b !== 0) {
+    do {
+      if (a > b) {
+        a %= b;
+      } else {
+        b %= a;
+      }
+    } while (a !== 0 && b !== 0);
+
+    taskArr[1] = String(a + b);
+  }
+
+  return taskArr;
 };
-
-// const generateQuestion = () => {
-//   const a = getRandomNum();
-//   const b = getRandomNum();
-//   return `${a} ${b}`;
-// };
-
-// const generateAnswer = (question) => {
-//   const questionArr = question.split(' ');
-//   let a = Number(questionArr[0]);
-//   let b = Number(questionArr[1]);
-//   if (a === b) {
-//     return String(a);
-//   }
-//   if (a === 0) {
-//     return String(b);
-//   }
-//   if (b === 0) {
-//     return String(a);
-//   }
-//   if (a !== 0 && b !== 0) {
-//     do {
-//       if (a > b) {
-//         a %= b;
-//       } else {
-//         b %= a;
-//       }
-//     } while (a !== 0 && b !== 0);
-//   }
-//   return String(a + b);
-// };
 
 const playGcd = () => {
   createFlow(generateQuestionAnswer, description);
 };
+
 export default playGcd;
