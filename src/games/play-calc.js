@@ -1,38 +1,36 @@
-import createFlow from '../flow.js';
+import runFlow from '../flow.js';
 import getRandomNum from '../random-num.js';
 
-const actionsArr = ['+', '-', '*'];
+const operators = ['+', '-', '*'];
 
 const description = 'What is the result of the expression?';
 
-const generateQuestionAnswer = () => {
-  const taskArr = [];
+const calcOperation = (a, b, operator) => {
+  switch (operator) {
+    case '+':
+      return (a + b);
 
+    case '*':
+      return (a * b);
+
+    default:
+      return (a - b);
+  }
+};
+
+const generateQuestionAnswer = () => {
   const a = getRandomNum();
   const b = getRandomNum();
+  const operator = operators[getRandomNum(0, operators.length - 1)];
 
-  const action = actionsArr[getRandomNum(0, actionsArr.length - 1)];
+  const question = `${a} ${operator} ${b}`;
+  const answer = String(calcOperation(a, b, operator));
 
-  if (action === '+') {
-    taskArr[0] = `${a} + ${b}`;
-    taskArr[1] = String(a + b);
-  } else
-
-  if (action === '*') {
-    taskArr[0] = `${a} * ${b}`;
-    taskArr[1] = String(a * b);
-  } else
-
-  if (action === '-') {
-    taskArr[0] = `${a} - ${b}`;
-    taskArr[1] = String(a - b);
-  }
-
-  return taskArr;
+  return [question, answer];
 };
 
 const playCalc = () => {
-  createFlow(generateQuestionAnswer, description);
+  runFlow(generateQuestionAnswer, description);
 };
 
 export default playCalc;

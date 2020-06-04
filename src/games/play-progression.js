@@ -1,4 +1,4 @@
-import createFlow from '../flow.js';
+import runFlow from '../flow.js';
 import getRandomNum from '../random-num.js';
 
 const description = 'What number is missing in the progression?';
@@ -6,7 +6,6 @@ const lengthProgression = 10;
 const createHiddenElPosition = () => getRandomNum(0, lengthProgression - 1);
 
 const generateQuestionAnswer = () => {
-  const taskArr = [];
   const progression = [];
   let el = getRandomNum();
   const difference = getRandomNum();
@@ -17,15 +16,15 @@ const generateQuestionAnswer = () => {
     el += difference;
   }
 
-  taskArr[1] = String(progression[HiddenElPosition]);
+  const answer = String(progression[HiddenElPosition]);
   progression[HiddenElPosition] = '..';
-  taskArr[0] = progression.join(' ');
+  const question = progression.join(' ');
 
-  return taskArr;
+  return [question, answer];
 };
 
 const playProgression = () => {
-  createFlow(generateQuestionAnswer, description);
+  runFlow(generateQuestionAnswer, description);
 };
 
 

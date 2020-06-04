@@ -1,18 +1,17 @@
-import createFlow from '../flow.js';
+import runFlow from '../flow.js';
 import getRandomNum from '../random-num.js';
 
 const description = 'Answer "yes" if the number is even, otherwise answer "no".';
-const isEven = (num) => (num % 2 === 0 ? 'yes' : 'no');
+const isEven = (num) => num % 2 === 0;
 
 const generateQuestionAnswer = () => {
-  const taskArr = [];
-  taskArr[0] = String(getRandomNum());
-  taskArr[1] = isEven(taskArr[0]);
-  return taskArr;
+  const question = String(getRandomNum());
+  const answer = (isEven(question) ? 'yes' : 'no');
+  return [question, answer];
 };
 
 const playEvenParity = () => {
-  createFlow(generateQuestionAnswer, description);
+  runFlow(generateQuestionAnswer, description);
 };
 
 export default playEvenParity;

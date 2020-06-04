@@ -1,24 +1,24 @@
-import createFlow from '../flow.js';
+import runFlow from '../flow.js';
 import getRandomNum from '../random-num.js';
 
 const description = 'Find the greatest common divisor of given numbers.';
 
-const generateQuestionAnswer = () => {
-  const taskArr = [];
-  let a = getRandomNum();
-  let b = getRandomNum();
-
-  taskArr[0] = `${a} ${b}`;
+const findGcd = (numFirst, numSecond) => {
+  let a = numFirst;
+  let b = numSecond;
 
   if (a === b) {
-    taskArr[1] = String(a);
-  } else
+    return String(a);
+  }
+
   if (a === 0) {
-    taskArr[1] = String(b);
-  } else
+    return String(b);
+  }
+
   if (b === 0) {
-    taskArr[1] = String(a);
-  } else
+    return String(a);
+  }
+
   if (a !== 0 && b !== 0) {
     do {
       if (a > b) {
@@ -27,15 +27,23 @@ const generateQuestionAnswer = () => {
         b %= a;
       }
     } while (a !== 0 && b !== 0);
-
-    taskArr[1] = String(a + b);
   }
 
-  return taskArr;
+  return String(a + b);
+};
+
+const generateQuestionAnswer = () => {
+  const a = getRandomNum();
+  const b = getRandomNum();
+
+  const question = `${a} ${b}`;
+  const answer = findGcd(a, b);
+
+  return [question, answer];
 };
 
 const playGcd = () => {
-  createFlow(generateQuestionAnswer, description);
+  runFlow(generateQuestionAnswer, description);
 };
 
 export default playGcd;
