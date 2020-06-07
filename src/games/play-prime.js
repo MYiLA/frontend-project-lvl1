@@ -2,17 +2,13 @@ import runFlow from '../flow.js';
 import getRandomNum from '../random-num.js';
 
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-const isPrime = function (num) {
-  if (num <= 1 || num === 4) {
+const isPrime = (num) => {
+  if (num <= 1) {
     return false;
   }
 
-  if (num === 2 || num === 3) {
-    return true;
-  }
-
-  for (let i = 2; i < num / 2; i += 1) {
-    if (num % i === 0) {
+  for (let divisor = 2; divisor < (num + 1) / 2; divisor += 1) {
+    if (num % divisor === 0) {
       return false;
     }
   }

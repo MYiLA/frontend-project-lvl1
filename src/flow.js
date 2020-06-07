@@ -15,13 +15,12 @@ const runFlow = (generateQuestionAnswer, description) => {
 
     if (answer !== answerUser) {
       console.log(`"${answerUser}" is wrong answer ;(. Correct answer was "${answer}".`);
-      return console.log(`Let's try again, ${name}!`);
+      console.log(`Let's try again, ${name}!`);
+      return;
     }
-
     console.log('Correct!');
   }
-
-  return console.log(`Congratulations, ${name}!`);
+  console.log(`Congratulations, ${name}!`);
 };
 
 export default runFlow;

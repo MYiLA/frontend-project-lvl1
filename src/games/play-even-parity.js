@@ -5,8 +5,9 @@ const description = 'Answer "yes" if the number is even, otherwise answer "no".'
 const isEven = (num) => num % 2 === 0;
 
 const generateQuestionAnswer = () => {
-  const question = String(getRandomNum());
-  const answer = (isEven(question) ? 'yes' : 'no');
+  const num = getRandomNum();
+  const question = String(num);
+  const answer = (isEven(num) ? 'yes' : 'no');
   return [question, answer];
 };
 

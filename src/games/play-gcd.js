@@ -8,15 +8,15 @@ const findGcd = (numFirst, numSecond) => {
   let b = numSecond;
 
   if (a === b) {
-    return String(a);
+    return a;
   }
 
   if (a === 0) {
-    return String(b);
+    return b;
   }
 
   if (b === 0) {
-    return String(a);
+    return a;
   }
 
   if (a !== 0 && b !== 0) {
@@ -29,7 +29,7 @@ const findGcd = (numFirst, numSecond) => {
     } while (a !== 0 && b !== 0);
   }
 
-  return String(a + b);
+  return a + b;
 };
 
 const generateQuestionAnswer = () => {
@@ -37,7 +37,7 @@ const generateQuestionAnswer = () => {
   const b = getRandomNum();
 
   const question = `${a} ${b}`;
-  const answer = findGcd(a, b);
+  const answer = String(findGcd(a, b));
 
   return [question, answer];
 };
