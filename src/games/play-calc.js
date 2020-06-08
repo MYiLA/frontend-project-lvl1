@@ -5,7 +5,7 @@ const operators = ['+', '-', '*'];
 
 const description = 'What is the result of the expression?';
 
-const calcOperation = (a, b, operator) => {
+const calculateOperation = (a, b, operator) => {
   switch (operator) {
     case '+':
       return (a + b);
@@ -13,8 +13,11 @@ const calcOperation = (a, b, operator) => {
     case '*':
       return (a * b);
 
-    default:
+    case '-':
       return (a - b);
+
+    default:
+      throw new Error(`Unknown operator "${operator}"!`);
   }
 };
 
@@ -24,7 +27,7 @@ const generateQuestionAnswer = () => {
   const operator = operators[getRandomNum(0, operators.length - 1)];
 
   const question = `${a} ${operator} ${b}`;
-  const answer = String(calcOperation(a, b, operator));
+  const answer = String(calculateOperation(a, b, operator));
 
   return [question, answer];
 };

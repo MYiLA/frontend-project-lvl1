@@ -7,28 +7,13 @@ const findGcd = (numFirst, numSecond) => {
   let a = numFirst;
   let b = numSecond;
 
-  if (a === b) {
-    return a;
+  while (a !== 0 && b !== 0) {
+    if (a > b) {
+      a %= b;
+    } else {
+      b %= a;
+    }
   }
-
-  if (a === 0) {
-    return b;
-  }
-
-  if (b === 0) {
-    return a;
-  }
-
-  if (a !== 0 && b !== 0) {
-    do {
-      if (a > b) {
-        a %= b;
-      } else {
-        b %= a;
-      }
-    } while (a !== 0 && b !== 0);
-  }
-
   return a + b;
 };
 
