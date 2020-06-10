@@ -1,4 +1,4 @@
-<img src="https://github.com/MYiLA/frontend-project-lvl1/workflows/actions/badge.svg" />
+<img src="https://github.com/MYiLA/frontend-project-lvl1/workflows/node-ci/badge.svg" />
 <!-- https://github.com/<OWNER>/<REPOSITORY>/workflows/<WORKFLOW_NAME>/badge.svg
 https://github.com/MYiLA/frontend-project-lvl1/actions -->
 
