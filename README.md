@@ -1,4 +1,4 @@
-<a href="https://github.com/MYiLA/frontend-project-lvl1/actions?query=workflow%3Anode-ci">
+<a href="https://github.com/MYiLA/frontend-project-lvl1/actions">
   <img src="https://github.com/MYiLA/frontend-project-lvl1/workflows/node-ci/badge.svg" />
 </a>
 
