@@ -5,15 +5,15 @@ const description = 'What number is missing in the progression?';
 const lengthProgression = 10;
 
 const createAProgression = (firstEl, diff, length) => {
-  const result = [];
+  const progression = [];
   let el = firstEl;
 
   for (let i = 0; i < length; i += 1) {
-    result.push(el);
+    progression.push(el);
     el += diff;
   }
 
-  return result;
+  return progression;
 };
 
 const generateQuestionAnswer = () => {
